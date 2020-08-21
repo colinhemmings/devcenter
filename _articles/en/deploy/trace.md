@@ -212,3 +212,55 @@ To check out individual sessions:
 4. Set a date range for the sessions you want to see - for example, 24 hours.
 5. Navigate between the different user sessions with the in the top right.
 6. To see a user journey in detail, scroll down to the **User Journey** section, and click **Show All**.
+
+# Product information
+
+## SDK Data collection
+In order for Trace to provide information on the performance of your apps, our SDK collects data about the app when running on the end users device. Defined below is a list of the types of Data Collected by the Trace SDK
+
+### Session Properties
+
+- Device Type: The name of the device type (e.g. iPhone X )
+- App Version: The version name
+- App Build: The app version code or build number
+- Network: The network type the device is connected to (e.g. 4G, wifi, EDGE)
+- Carrier: The network or cell phone carrier (e.g. AT&T, T-Mobile, Vodafone)
+- OS Version: The operating system version
+
+### Metrics and Traces
+- Application CPU usage: the percentage of device CPU used by the target app
+- App Memory usage: the percentage of device memory used by the target app
+- Statup trace
+   - duration from app start to ready
+   - timestampe
+- Crash traces
+   - exception
+   - crash report
+   - timestamp
+- Network traces
+   - URL (query and fragement parameters are stripped)
+   - request size (in bytes)
+   - response size (in bytes)
+   - status code
+   - duration of enitre request/response
+   - timestamp
+- View traces
+   - view name
+   - duration of time displayed
+   - timestamp
+
+Note: the minimum trace duration is 1ms. Traces any smaller will not be recorded.
+
+## Requirements
+
+### iOS SDK
+For integrating the iOS SDK we require a minimum:
+- iOS 10
+- Swift 5 or Objective-C
+- Xcode 11
+
+### Android SDK
+For integrating the Android SDK we require a minumim:
+- Android 5.1 (API 22)
+- Gradle 4.4
+- Java 8
